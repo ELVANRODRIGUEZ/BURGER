@@ -1,0 +1,96 @@
+/* ====================================== GENERAL */
+
+body, html {
+
+    width: 100%;
+ }
+ 
+ h1 {
+     margin: 0;
+     padding: 40px 0;
+ }
+ 
+ h3, h4 {
+     display: inline;
+ }
+ 
+ h4 {
+     line-height: 20pt;
+ }
+ 
+ 
+ /* ====================================== HEADER */
+ 
+ .headerDiv {
+     width: 100%;
+     background-color: black;
+     color: white;
+ 
+ }
+ 
+ 
+ /* ====================================== CONTAINERS */
+ 
+ .container {
+     margin: 30px auto;
+     
+ }
+ 
+ .questionContainer {
+     background-color: rgb(182, 182, 182);
+     border-radius: 5px;
+     padding: 10px;
+     margin: 15px auto;
+     width: calc(100% - 30px);
+     height: 180px;
+     position: relative;
+ }
+ 
+ .chosen-select {
+     width: 180px;
+     border-radius: 3px;
+     border: solid 1px rgb(151, 151, 151);
+ }
+ 
+ .selectDropDown {
+     position: absolute;
+     bottom: 50px;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 2;
+ }
+ 
+ #submit {
+     width: 50%;
+     height: 75px;
+     background-color: black;
+     color: white;
+ }
+ 
+ /* ====================================== LINKS */
+ 
+ p {
+     margin: 0px auto;
+     display:inline-block;
+ 
+ }
+ 
+ .links {
+     padding: 40px 0;
+     margin: 0px auto;
+     color: white;
+ }
+ 
+ a {
+     font-size: 14pt;
+ 
+ }
+ 
+ 
+ /* ====================================== MODAL */
+ 
+ #match-img, #your-img {
+     width: 100%;
+ }
+ 
+ 
