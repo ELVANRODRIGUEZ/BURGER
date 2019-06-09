@@ -1,282 +1,119 @@
+<div class="headerDiv text-center">
+    <img id="leftFrame" src="../public/assets/images/Frame.png" alt="headerLeftFrame">
+    <h1>Burger Chalet</h1>
+    <img id="rightFrame" src="../public/assets/images/Frame.png" alt="headRightLeftFrame">
+</div>
 
-    <div class="headerDiv text-center">
-        <h1>Find your famous personality</h1>
-    </div>
 
-    <div id="container0" class="d-flex justify-content-center">
+<div id="container1" class="container">
 
-        <div id="container1" class="container">
+    <div class="row">
 
-            <h3><strong>First, let us know about you</strong></h3>
-            <br>
-            <br>
-            <h4>Name</h4>
-            <input type="text" id="name" class="form-control" required>
+        <div class="colMainPic col-12 col-md-6 col-lg-6 justify-content-center">
 
-            <h4>Link to Photo Image</h4>
-            <input type="text" id="photo" class="form-control" required>
+            {{!-- <div class="questionContainer">
+                <h3><strong>1) </strong></h3>
+                <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                <br>
+                <br>
+                <div class="selectDropDown">
+                    <select class="chosen-select" id="q1">
+                        <option value=""></option>
+                        <option value="1">1 (Yes)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (No)</option>
+                    </select>
+                </div>
+            </div> --}}
+
+            <img id="mainPic" src="../public/assets/images/MainPIc.jpg" alt="MainPic">
 
         </div>
 
-        <div id="container2" class="container">
+        <div class="colMenu col-12 col-md-6 col-lg-6">
 
-            <div class="row">
+            <img id="orderBoard" class="board" src="../public/assets/images/blackboard.jpg" alt="OrderBoard">
+            <img id="checkOutBoard" class="board" src="../public/assets/images/blackboard.jpg" alt="CheckOutBoard">
 
-                <div class="col-12 col-lg-6 justify-content-center">
+        </div>
 
-                    <div class="questionContainer">
-                        <h3><strong>1) </strong></h3>
-                        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q1">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+    </div>
 
-                    <div class="questionContainer">
-                        <h3><strong>2)</strong></h3>
-                        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q2">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+    <br>
 
-                    <div class="questionContainer">
-                        <h3><strong>3)</strong></h3>
-                        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q3">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+</div>
 
-                    <div class="questionContainer">
-                        <h3><strong>4)</strong></h3>
-                        <h4>You rarely do something just out of sheer curiosity.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q4">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+<div id="container3" class="container text-center">
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-lg" id="submit">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <b>Submit</b>
+    </button>
 
-                    <div class="questionContainer">
-                        <h3><strong>5)</strong></h3>
-                        <h4>People can rarely upset you.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q5">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+</div>
 
-                <div class="col-12 col-lg-6">
 
-                    <div class="questionContainer">
-                        <h3><strong>6)</strong></h3>
-                        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q6">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="questionContainer">
-                        <h3><strong>7)</strong></h3>
-                        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q7">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+<footer class="headerDiv ">
+    <div class="links text-center">
+        <p>
+            <a href="/api/historical_figures">API Friends List&nbsp;</a> &nbsp;|&nbsp; <a
+                href="https://github.com/ELVANRODRIGUEZ/CASUAL-FRIEND-FINDER">&nbsp;GitHub Repo</a>
+        </p>
+    </div>
+</footer>
 
-                    <div class="questionContainer">
-                        <h3><strong>8)</strong></h3>
-                        <h4>You rarely get carried away by fantasies and ideas.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q8">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="questionContainer">
-                        <h3><strong>9)</strong></h3>
-                        <h4>You think that everyone’s views should be respected regardless of whether they are supported
-                            by facts or
-                            not.
-                        </h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q9">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
+<!-- Modals -->
+<div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-                    <div class="questionContainer">
-                        <h3><strong>10)</strong></h3>
-                        <h4>You feel more energetic after spending time with a group of people.</h4>
-                        <br>
-                        <br>
-                        <div class="selectDropDown">
-                            <select class="chosen-select" id="q10">
-                                <option value=""></option>
-                                <option value="1">1 (Yes)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (No)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title" id="soul-mate"></h2>
             </div>
-
-            <br>
-
-        </div>
-
-        <div id="container3" class="container text-center">
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-lg" id="submit">
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-                <b>Submit</b>
-            </button>
-
-        </div>
-
-    </div>
-
-    <footer class="headerDiv ">
-        <div class="links text-center">
-            <p>
-                <a href="/api/historical_figures">API Friends List&nbsp;</a> &nbsp;|&nbsp; <a
-                    href="https://github.com/ELVANRODRIGUEZ/CASUAL-FRIEND-FINDER">&nbsp;GitHub Repo</a>
-            </p>
-        </div>
-    </footer>
-
-
-    <!-- Modals -->
-    <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title" id="soul-mate"></h2>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <h4 id="your-name"></h4>
-                            <img id="your-img" src="" alt="">
-                        </div>
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <h4 id="match-name"></h4>
-                            <img id="match-img" src="" alt="">
-                        </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <h4 id="your-name"></h4>
+                        <img id="your-img" src="" alt="">
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <h4 id="match-name"></h4>
+                        <img id="match-img" src="" alt="">
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-    </div>
-
-    <div id="warning-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title">Upsss!!!</h2>
-                </div>
-                <div class="modal-body">
-                    <h4>Please fill out all fields before submitting.</h4>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-
         </div>
 
     </div>
+
+</div>
+
+<div id="warning-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">Upsss!!!</h2>
+            </div>
+            <div class="modal-body">
+                <h4>Please fill out all fields before submitting.</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
