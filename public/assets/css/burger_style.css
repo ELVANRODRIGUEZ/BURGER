@@ -115,18 +115,9 @@ a {
     background-color: black;
 }
 
-#go {
-    margin-left: 4px;
-}
-
-#go:hover {
-    color: rgb(251, 255, 0);
-    cursor: pointer;
-}
-
 #burgerInpArea {
     width: 59%;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(26, 26, 26);
     border: 0;
     border-bottom: 2px;
     font-family: Papyrus,fantasy; 
@@ -139,6 +130,15 @@ a {
     overflow: auto;
 }
 
+#add {
+    margin-left: 4px;
+}
+
+#add:hover {
+    color: rgb(251, 255, 0);
+    cursor: pointer;
+}
+
 #burgerOrder {
     position: absolute;
     top: 35%;
@@ -147,6 +147,22 @@ a {
     height: 51%;
     background-color: rgb(0, 0, 0);
     overflow: auto;
+}
+
+.fa-hamburger {
+    color: white;
+    padding-left: 25px;
+}
+
+#burgerCreated {
+    color: white;
+    padding-left: 10px;
+    font-family: Papyrus,fantasy; 
+}
+
+#burgerCreated:hover {
+    color: rgb(251, 255, 0);
+    cursor: pointer;
 }
 
 #burgerCheckout {
@@ -173,12 +189,6 @@ a {
     border: solid 1px rgb(151, 151, 151);
 }
 
-#submit {
-    width: 50%;
-    height: 75px;
-    background-color: black;
-    color: white;
-}
 
 /* ====================================== LINKS */
 

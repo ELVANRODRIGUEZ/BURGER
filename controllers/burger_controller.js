@@ -13,8 +13,10 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burger/post", function (req, res) {
+
     var newBurger = req.body.burger;
     console.log(newBurger);
+
     var columnVal = {
         burger_name: newBurger,
         devouered: false
@@ -22,7 +24,7 @@ router.post("/api/burger/post", function (req, res) {
 
     burger.insIntoBurgers(columnVal, function (data) {
 
-        console.log(data);
+        res.send(data);
 
     })
 
