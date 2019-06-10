@@ -16,7 +16,7 @@
 //         //     console.log("New Burger Created");
 
 //         // });
-        
+
 //         // var id = 3;
 //         // var burgerState = 0;
 
@@ -31,7 +31,7 @@
 //         //     console.log("Burger Updated");
 
 //         // });
-       
+
 //         // var id = 3;
 
 //         // $.ajax("/api/burger/delete/" + id, {
@@ -54,7 +54,7 @@ $(function () {
 
         console.log(burger);
 
-                $.ajax("/api/burger/post", {
+        $.ajax("/api/burger/post", {
             type: "POST",
             data: {
                 burger: burger
@@ -71,10 +71,44 @@ $(function () {
             burgerCost = burgerCost.toFixed(2);
 
             burgerAppend = "<i class='fas fa-hamburger'></i>";
-            burgerAppend += "<p id='burgerCreated' dbId='";
+            burgerAppend += "<p class='burgerCreated' dbId='";
             burgerAppend += data.insertId + "'>"
             burgerAppend += burger + "&nbsp&nbsp&nbsp$";
             burgerAppend += burgerCost + "&nbsp&nbsp&nbspCheckout!</p><br>";
+
+            $burgerOrder.append(burgerAppend);
+
+            $("#burgerInpArea").val("");
+
+        });
+
+    });
+
+    $("#burgerOrder").on("click", ".burgerCreated", function (event) {
+
+        var burgerCreatedId = $(this).attr("dbId");
+        var burgerCreated = $(this).text();
+
+        console.log(burgerCreatedId);
+
+        $.ajax("/api/burger/update/" + burgerCreatedId, {
+            type: "PUT",
+            data: {
+                burgerState: 1
+            }
+        }).then(function (data) {
+
+            // console.log(data);
+            console.log("Your order is ready to checkout!");
+
+            var $burgerOrder = $("#burgerCheckout");
+
+            var burgerAppend;
+
+            burgerAppend = "<i class='fas fa-hamburger'></i>";
+            burgerAppend += "<p class='burgerCreated' dbId='";
+            burgerAppend += burgerCreatedId + "'>"
+            burgerAppend += burgerCreated + "</p><br>";
 
             $burgerOrder.append(burgerAppend);
 
