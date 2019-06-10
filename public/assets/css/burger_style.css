@@ -60,6 +60,7 @@ h4 {
 .container {
     /* margin: 30px auto; */
     width: 100%;
+    /* padding: 0px; */
 }
 
 /* .questionContainer {
@@ -80,8 +81,17 @@ h4 {
     padding: 0;
 }
 
+
+/* ====================================== MENU */
+
 .colMenu {
     padding: 0;
+}
+
+#orderBoardCont, #checkOutBoardCont {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
 
 .board {
@@ -89,13 +99,47 @@ h4 {
     /* transform: rotate(90deg); */
 }
 
+#burgerInput {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    background-color: red;
+}
+
+#burgerOrder {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 75px);
+    background-color: green;
+    overflow: scroll;
+}
+
+#burgerCheckout {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    background-color: green;
+    overflow: scroll;
+}
+
+.boardHeader {
+    color: white;
+    font-family: Papyrus,fantasy; 
+    font-weight: bolder;
+    font-size: 14pt;
+    line-height: 18pt;
+}
+
 .chosen-select {
     width: 180px;
     border-radius: 3px;
     border: solid 1px rgb(151, 151, 151);
 }
-
-
 
 #submit {
     width: 50%;
