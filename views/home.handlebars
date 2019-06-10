@@ -37,7 +37,8 @@
             <div id="orderBoardCont">
                 <img id="orderBoard" class="board" src="../public/assets/images/blackboard1.jpg" alt="OrderBoard">
                 <div id="burgerInput">
-                    <p class="boardHeader">Please type your order:</p>
+                    <p class="boardHeader" id="boardHeaderInput">Type your order:</p><input id="burgerInpArea" rows="1"></textarea>
+                    <p class="boardHeader" id="go">Add!</p>
                 </div>
                 <div id="burgerOrder">
                     <p class="boardHeader">Your order is:</p><br>
@@ -64,17 +65,6 @@
 
 </div>
 
-<div id="container3" class="container text-center">
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-lg" id="submit">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <b>Submit</b>
-    </button>
-
-</div>
-
-
-
 <footer class="headerDiv ">
     <div class="links text-center">
         <p>
@@ -82,7 +72,6 @@
         </p>
     </div>
 </footer>
-
 
 <!-- Modals -->
 <div id="results-modal" class="modal fade" role="dialog">
@@ -105,27 +94,6 @@
                         <img id="match-img" src="" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-<div id="warning-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h2 class="modal-title">Upsss!!!</h2>
-            </div>
-            <div class="modal-body">
-                <h4>Please fill out all fields before submitting.</h4>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -13,6 +13,9 @@ body {
 h1 {
     margin: 0;
     padding: 40px 0;
+    font-family: Papyrus,fantasy; 
+    font-weight: bolder;
+
 }
 
 h3,
@@ -22,6 +25,11 @@ h4 {
 
 h4 {
     line-height: 20pt;
+}
+
+a {
+    font-family: Papyrus,fantasy; 
+    font-weight: bolder;
 }
 
 
@@ -96,42 +104,66 @@ h4 {
 
 .board {
     width: 100%;
-    /* transform: rotate(90deg); */
 }
 
 #burgerInput {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    width: calc(100% - 50px);
-    background-color: red;
+    top: 14%;
+    left: 5%;
+    width: 90%;
+    height: 30px;
+    background-color: black;
+}
+
+#go {
+    margin-left: 4px;
+}
+
+#go:hover {
+    color: rgb(251, 255, 0);
+    cursor: pointer;
+}
+
+#burgerInpArea {
+    width: 59%;
+    background-color: rgb(41, 41, 41);
+    border: 0;
+    border-bottom: 2px;
+    font-family: Papyrus,fantasy; 
+    color: white;
+    font-size: 12pt;
+    line-height: 18pt;
+    padding: 0;
+    padding-left: 8px;
+    text-decoration: underline;
+    overflow: auto;
 }
 
 #burgerOrder {
     position: absolute;
-    top: 50px;
-    left: 25px;
-    width: calc(100% - 50px);
-    height: calc(100% - 75px);
-    background-color: green;
-    overflow: scroll;
+    top: 35%;
+    left: 5%;
+    width: 90%;
+    height: 51%;
+    background-color: rgb(0, 0, 0);
+    overflow: auto;
 }
 
 #burgerCheckout {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    width: calc(100% - 50px);
-    height: calc(100% - 50px);
-    background-color: green;
-    overflow: scroll;
+    top: 8%;
+    left: 5%;
+    width: 90%;
+    height: 84%;
+    background-color: rgb(0, 0, 0);
+    overflow: auto;
 }
 
 .boardHeader {
     color: white;
     font-family: Papyrus,fantasy; 
     font-weight: bolder;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 18pt;
 }
 
