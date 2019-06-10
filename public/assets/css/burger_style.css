@@ -77,15 +77,16 @@ h4 {
 }
 
 .colMainPic {
-    padding-left: 0;
+    padding: 0;
 }
 
 .colMenu {
-    padding-right: 0;
+    padding: 0;
 }
 
 .board {
-    width: 45%;
+    width: 100%;
+    /* transform: rotate(90deg); */
 }
 
 .chosen-select {
