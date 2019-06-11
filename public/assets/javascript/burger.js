@@ -60,7 +60,7 @@ $(function () {
 
         }
 
-        console.log(burger);
+        // console.log(burger);
 
         $.ajax("/api/burger/post", {
             type: "POST",
@@ -102,8 +102,8 @@ $(function () {
         var $thisBurger = $(this);
         var $burgerIcon = $("#burgerOrder > [dbId='" + burgerCreatedId + "']")
 
-        console.log("Burger Icon: " + $burgerIcon.attr("class"));
-        console.log("Id: " + $burgerIcon.attr("dbId"));
+        // console.log("Burger Icon: " + $burgerIcon.attr("class"));
+        // console.log("Id: " + $burgerIcon.attr("dbId"));
 
         $.ajax("/api/burger/update/" + burgerCreatedId, {
             type: "PUT",
@@ -113,7 +113,7 @@ $(function () {
         }).then(function (data) {
 
             // console.log(data);
-            console.log("Your order is ready to be paid!");
+            console.log("Your " + burgerName + " is ready to be paid!");
 
             var $burgerCheckout = $("#burgerCheckout");
 
@@ -128,7 +128,6 @@ $(function () {
             burgerAppend += "<p class='buyNot' dbId='" + burgerCreatedId + "'>&nbsp/&nbsp&nbsp&nbspGuess Not!</p><br>";
 
             $burgerCheckout.append(burgerAppend);
-            console.log($thisBurger);
             $thisBurger.remove();
             $burgerIcon.remove();
 
@@ -141,6 +140,7 @@ $(function () {
     $("#burgerCheckout").on("click", ".burgerCreated", function (event) {
 
         var burgerChkOutId = $(this).attr("dbId");
+        var burgerName = $(this).attr("name");
         var $thisBurger = $(this);
         var $burgerIcon = $("#burgerCheckout > [dbId='" + burgerChkOutId + "']")
 
@@ -153,9 +153,8 @@ $(function () {
         }).then(function (data) {
 
             // console.log(data);
-            console.log("Your order is ready to go!");
+            console.log("Your " + burgerName + " is ready to go!");
 
-            console.log($thisBurger);
             $thisBurger.remove();
             $burgerIcon.remove();
 
