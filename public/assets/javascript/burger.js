@@ -96,6 +96,7 @@ $(function () {
         var burgerCreatedId = $(this).attr("dbId");
         var burgerName = $(this).attr("name");
         var burgerCost = $(this).attr("cost");
+        var $thisBurger = $(this);
 
         console.log(burgerCreatedId);
         console.log(burgerName);
@@ -111,7 +112,8 @@ $(function () {
             // console.log(data);
             console.log("Your order is ready to checkout!");
 
-            var $burgerOrder = $("#burgerCheckout");
+            var $burgerCheckout = $("#burgerCheckout");
+            var $burgerOrder = $("#burgerOrder");
 
             var burgerAppend;
 
@@ -123,7 +125,10 @@ $(function () {
             burgerAppend += burgerCost + "&nbsp&nbsp&nbspPay!</p>";
             burgerAppend += "<p class='buyNot' dbId='" + burgerCreatedId + "'>&nbsp/&nbsp&nbsp&nbspGuess Not!</p><br>";
 
-            $burgerOrder.append(burgerAppend);
+            $burgerCheckout.append(burgerAppend);
+            console.log($thisBurger);
+            $thisBurger.remove();
+
 
         });
 
