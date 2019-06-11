@@ -144,7 +144,7 @@ a {
     padding-left: 25px;
 }
 
-.burgerCreated {
+.burgerCreated, .buyNot {
     color: white;
     padding-left: 10px;
     font-family: Papyrus,fantasy; 
@@ -152,6 +152,11 @@ a {
 
 .burgerCreated:hover {
     color: rgb(251, 255, 0);
+    cursor: pointer;
+}
+
+.buyNot:hover {
+    color: rgb(255, 0, 0);
     cursor: pointer;
 }
 

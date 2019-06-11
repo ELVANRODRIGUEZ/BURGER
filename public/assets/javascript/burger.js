@@ -50,7 +50,13 @@
 $(function () {
     $("#add").on("click", function (event) {
 
-        var burger = $("#burgerInpArea").val();
+        var burger = $("#burgerInpArea").val().trim();
+
+        if (!burger || burger.trim() == "") {
+            
+            return;
+
+        }
 
         console.log(burger);
 
@@ -72,7 +78,8 @@ $(function () {
 
             burgerAppend = "<i class='fas fa-hamburger'></i>";
             burgerAppend += "<p class='burgerCreated' dbId='";
-            burgerAppend += data.insertId + "'>"
+            burgerAppend += data.insertId + "' cost='" + burgerCost + "'";
+            burgerAppend += "' name='" + burger + "'>";
             burgerAppend += burger + "&nbsp&nbsp&nbsp$";
             burgerAppend += burgerCost + "&nbsp&nbsp&nbspCheckout!</p><br>";
 
@@ -87,9 +94,12 @@ $(function () {
     $("#burgerOrder").on("click", ".burgerCreated", function (event) {
 
         var burgerCreatedId = $(this).attr("dbId");
-        var burgerCreated = $(this).text();
+        var burgerName = $(this).attr("name");
+        var burgerCost = $(this).attr("cost");
 
         console.log(burgerCreatedId);
+        console.log(burgerName);
+        console.log(burgerCost);
 
         $.ajax("/api/burger/update/" + burgerCreatedId, {
             type: "PUT",
@@ -107,12 +117,13 @@ $(function () {
 
             burgerAppend = "<i class='fas fa-hamburger'></i>";
             burgerAppend += "<p class='burgerCreated' dbId='";
-            burgerAppend += burgerCreatedId + "'>"
-            burgerAppend += burgerCreated + "</p><br>";
+            burgerAppend += burgerCreatedId + "' cost='" + burgerCost + "'";
+            burgerAppend += "' name='" + burgerName + "'>";
+            burgerAppend += burgerName + "&nbsp&nbsp&nbsp$";
+            burgerAppend += burgerCost + "&nbsp&nbsp&nbspPay!</p>";
+            burgerAppend += "<p class='buyNot' dbId='" + burgerCreatedId + "'>&nbsp/&nbsp&nbsp&nbspGuess Not!</p><br>";
 
             $burgerOrder.append(burgerAppend);
-
-            $("#burgerInpArea").val("");
 
         });
 
