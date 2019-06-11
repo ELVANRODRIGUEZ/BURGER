@@ -48,6 +48,8 @@
 // })
 
 $(function () {
+
+    //  Create burger.
     $("#add").on("click", function (event) {
 
         var burger = $("#burgerInpArea").val().trim();
@@ -91,6 +93,7 @@ $(function () {
 
     });
 
+    // Add burger to Checkout and erase it from Order Blackboard.
     $("#burgerOrder").on("click", ".burgerCreated", function (event) {
 
         var burgerCreatedId = $(this).attr("dbId");
@@ -101,9 +104,6 @@ $(function () {
 
         console.log("Burger Icon: " + $burgerIcon.attr("class"));
         console.log("Id: " + $burgerIcon.attr("dbId"));
-        // console.log(burgerCreatedId);
-        // console.log(burgerName);
-        // console.log(burgerCost);
 
         $.ajax("/api/burger/update/" + burgerCreatedId, {
             type: "PUT",
@@ -113,14 +113,13 @@ $(function () {
         }).then(function (data) {
 
             // console.log(data);
-            console.log("Your order is ready to checkout!");
+            console.log("Your order is ready to be paid!");
 
             var $burgerCheckout = $("#burgerCheckout");
-            var $burgerOrder = $("#burgerOrder");
 
             var burgerAppend;
 
-            burgerAppend = "<i class='fas fa-hamburger'></i>";
+            burgerAppend = "<i dbId='" + burgerCreatedId + "' class='fas fa-hamburger'></i>";
             burgerAppend += "<p class='burgerCreated' dbId='";
             burgerAppend += burgerCreatedId + "' cost='" + burgerCost + "'";
             burgerAppend += "' name='" + burgerName + "'>";
@@ -138,43 +137,27 @@ $(function () {
 
     });
     
+    //  Buy burger and delete it from Checkout Board.
     $("#burgerCheckout").on("click", ".burgerCreated", function (event) {
 
         var burgerChkOutId = $(this).attr("dbId");
-        var burgerName = $(this).attr("name");
-        var burgerCost = $(this).attr("cost");
         var $thisBurger = $(this);
+        var $burgerIcon = $("#burgerCheckout > [dbId='" + burgerChkOutId + "']")
 
-        console.log(burgerChkOutId);
-        console.log(burgerName);
-        console.log(burgerCost);
+        // console.log(burgerChkOutId);
+        // console.log(burgerName);
+        // console.log(burgerCost);
 
-        $.ajax("/api/burger/update/" + burgerChkOutId, {
-            type: "PUT",
-            data: {
-                burgerState: 1
-            }
+        $.ajax("/api/burger/delete/" + burgerChkOutId, {
+            type: "DELETE",
         }).then(function (data) {
 
             // console.log(data);
-            console.log("Your order is ready to checkout!");
+            console.log("Your order is ready to go!");
 
-            var $burgerCheckout = $("#burgerCheckout");
-            var $burgerOrder = $("#burgerOrder");
-
-            var burgerAppend;
-
-            burgerAppend = "<i class='fas fa-hamburger'></i>";
-            burgerAppend += "<p class='burgerCreated' dbId='";
-            burgerAppend += burgerChkOutId + "' cost='" + burgerCost + "'";
-            burgerAppend += "' name='" + burgerName + "'>";
-            burgerAppend += burgerName + "&nbsp&nbsp&nbsp$";
-            burgerAppend += burgerCost + "&nbsp&nbsp&nbspPay!</p>";
-            burgerAppend += "<p class='buyNot' dbId='" + burgerChkOutId + "'>&nbsp/&nbsp&nbsp&nbspGuess Not!</p><br>";
-
-            $burgerCheckout.append(burgerAppend);
             console.log($thisBurger);
             $thisBurger.remove();
+            $burgerIcon.remove();
 
 
         });
