@@ -13,7 +13,7 @@ body {
 h1 {
     margin: 0;
     padding: 40px 0;
-    font-family: Papyrus,fantasy; 
+    font-family: Papyrus, fantasy;
     font-weight: bolder;
 
 }
@@ -28,7 +28,7 @@ h4 {
 }
 
 a {
-    font-family: Papyrus,fantasy; 
+    font-family: Papyrus, fantasy;
     font-weight: bolder;
 }
 
@@ -61,8 +61,6 @@ a {
 }
 
 
-
-
 /* ====================================== CONTAINERS */
 
 .container {
@@ -80,13 +78,14 @@ a {
 }
 
 
-/* ====================================== MENU */
+/* ====================================== ORDER BLACKBOARD */
 
 .colMenu {
     padding: 0;
 }
 
-#orderBoardCont, #checkOutBoardCont {
+#orderBoardCont,
+#checkOutBoardCont {
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -110,14 +109,21 @@ a {
     background-color: rgb(26, 26, 26);
     border: 0;
     border-bottom: 2px;
-    font-family: Papyrus,fantasy; 
+    font-family: Papyrus, fantasy;
     color: white;
-    font-size: 12pt;
+    font-size: 16pt;
     line-height: 18pt;
     padding: 0;
     padding-left: 8px;
     text-decoration: underline;
     overflow: auto;
+}
+
+@media only screen and (max-width: 991px) {
+    #burgerInpArea {
+        font-size: 18pt;
+        line-height: 20pt;
+    }
 }
 
 #add {
@@ -144,16 +150,30 @@ a {
     padding-left: 25px;
 }
 
-.burgerCreated, .buyNot {
+.burgerCreated,
+.buyNot {
     color: white;
     padding-left: 10px;
-    font-family: Papyrus,fantasy; 
+    font-size: 16pt;
+    line-height: 18pt;
+    font-family: Papyrus, fantasy;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .burgerCreated,
+    .buyNot {
+        font-size: 20pt;
+        line-height: 22pt;
+    }
 }
 
 .burgerCreated:hover {
     color: rgb(251, 255, 0);
     cursor: pointer;
 }
+
+/* ====================================== CHECKOUT BLACKBOARD */
 
 .buyNot:hover {
     color: rgb(255, 0, 0);
@@ -172,10 +192,24 @@ a {
 
 .boardHeader {
     color: white;
-    font-family: Papyrus,fantasy; 
+    font-family: Papyrus, fantasy;
     font-weight: bolder;
-    font-size: 12pt;
-    line-height: 18pt;
+    font-size: 14pt;
+    line-height: 16pt;
+}
+
+@media only screen and (max-width: 1124px) {
+    .boardHeader {
+        font-size: 12pt;
+        line-height: 14pt;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .boardHeader {
+        font-size: 20pt;
+        line-height: 22pt;
+    }
 }
 
 .chosen-select {
